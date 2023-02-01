@@ -6,7 +6,7 @@ import Drinkware from '../src/views/Drinkware';
 import Apparel from '../src/views/Apparel';
 import Notebooks from '../src/views/Notebooks';
 import Backpacks from '../src/views/Backpacks';
-import Cart from '../src/views/Cart';
+import Cart from './views/cart/Cart';
 import Signin from '../src/views/Signin';
 import Header from '../src/layout/Header';
 import Footer from '../src/layout/Footer';

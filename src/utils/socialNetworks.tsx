@@ -4,30 +4,36 @@ import yt from '../assets/img/Youtube.svg'
 import li from '../assets/img/Linkedin.svg'
 import tw from '../assets/img/Twitter.svg'
 
-export const socialNetworks = [
-	{
-		name: 'Facebook',
-		url: 'https://www.facebook.com/',
-		icon: fb
-	},
+interface socialNetInterface {
+    name: string,
+    url: string,
+    icon: string
+}
+
+export const socialNetworks: Array<socialNetInterface> = [
     {
-		name: 'Twitter',
-		url: 'https://www.twitter.com/',
-		icon: tw
-	},
+        name: 'Facebook',
+        url: 'https://www.facebook.com/',
+        icon: fb
+    },
     {
-		name: 'Instagram',
-		url: 'https://www.instagram.com/',
-		icon: ig
-	},
+        name: 'Twitter',
+        url: 'https://www.twitter.com/',
+        icon: tw
+    },
     {
-		name: 'Linkedin',
-		url: 'https://www.linkedin.com/',
-		icon: li
-	},
+        name: 'Instagram',
+        url: 'https://www.instagram.com/',
+        icon: ig
+    },
     {
-		name: 'Youtube',
-		url: 'https://www.youtube.com/',
-		icon: yt
-	},
+        name: 'Linkedin',
+        url: 'https://www.linkedin.com/',
+        icon: li
+    },
+    {
+        name: 'Youtube',
+        url: 'https://www.youtube.com/',
+        icon: yt
+    },
 ]
