@@ -1,6 +1,10 @@
+import Logo from "../components/Logo";
+
 function Footer() {
   return (
-    <div>Footer</div>
+    <div>
+      <Logo />
+    </div>
   )
 }
 

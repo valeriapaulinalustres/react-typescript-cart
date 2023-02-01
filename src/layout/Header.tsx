@@ -1,13 +1,30 @@
 import NavBar from "./NavBar";
-import Cart from "../views/Cart";
-import { Link } from 'react-router-dom'
+import Logo from "../components/Logo";
+import { Link } from 'react-router-dom';
+import user from "../assets/img/user.svg";
+import bag from "../assets/img/bag.svg";
+
 
 function Header() {
   return (
-    <div>
-     <Link to="/cart">Cart</Link>
+    <header>
+      <div>
+        <Logo />
+        <form>
+          <input type="text" placeholder="Search Products" />
+        </form>
+        <div>
+        <img src={user} alt="user icon" />
+        <Link to="/signin">Sign in</Link>
+        </div>
+       <div>
+       <img src={bag} alt="bag icon" />
+       <Link to="/cart">Cart</Link>
+       </div>
+        
+      </div>
       <NavBar />
-    </div>
+    </header>
   )
 }
 
