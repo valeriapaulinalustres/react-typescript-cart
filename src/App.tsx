@@ -7,6 +7,7 @@ import Apparel from '../src/views/Apparel';
 import Notebooks from '../src/views/Notebooks';
 import Backpacks from '../src/views/Backpacks';
 import Cart from '../src/views/Cart';
+import Signin from '../src/views/Signin';
 import Header from '../src/layout/Header';
 import Footer from '../src/layout/Footer';
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/notebooks" element={<Notebooks />} />
         <Route path="/backpacks" element={<Backpacks />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/signin" element={<Signin />} />
       </Routes>
       <Footer />
     </BrowserRouter>
