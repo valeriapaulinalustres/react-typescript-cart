@@ -1,10 +1,14 @@
 import ProductsOnSaleContainer from "./ProductsOnSaleContainer"
-import CartContainer from './CartContainer'
+import ProductsOnCartContainer from "./ProductsOnCartContainer"
+import Summary from './Summary'
 
 function Cart() {
   return (
     <div>
-      <CartContainer />
+      <div>
+        <ProductsOnCartContainer />
+        <Summary />
+      </div>
       <ProductsOnSaleContainer />
     </div>
 
