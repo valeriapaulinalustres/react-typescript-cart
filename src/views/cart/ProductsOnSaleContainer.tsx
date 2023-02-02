@@ -1,4 +1,4 @@
-import ProductsOnSale from '../../components/productOnSale'
+import ProductsOnSaleList from './ProductsOnSaleList'
 
 function ProductsOnSaleContainer() {
   return (
@@ -6,7 +6,7 @@ function ProductsOnSaleContainer() {
         <h2>
             You might also like
         </h2>
-        <ProductsOnSale />
+        <ProductsOnSaleList />
     </div>
   )
 }

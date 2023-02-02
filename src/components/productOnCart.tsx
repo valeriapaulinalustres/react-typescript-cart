@@ -1,7 +1,7 @@
 import remove from '../assets/img/remove.svg'
 import cartProduct from '../assets/img/cart-product.svg'
 
-function productOnCart() {
+function ProductOnCart() {
     return (
         <div>
             <img src={cartProduct} alt="" />
@@ -25,4 +25,4 @@ function productOnCart() {
     )
 }
 
-export default productOnCart
+export default ProductOnCart
