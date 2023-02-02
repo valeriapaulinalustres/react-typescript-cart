@@ -1,6 +1,10 @@
+import ProductsOnCartList from "./ProductsOnCartList"
+
 function ProductsOnCartContainer() {
   return (
-    <div>ProductsOnCartContainer</div>
+    <div>
+      <ProductsOnCartList />
+    </div>
   )
 }
 
