@@ -1,78 +1,25 @@
 import ProductOnCart from '../../components/ProductOnCart'
-import cartProduct from '../../assets/img/cartProduct.svg'
+import { useDispatch, useSelector } from "react-redux";
+import Box from '@mui/material/Box';
 
 function ProductsOnCartList() {
 
-    
-  interface productsOnCartInterface {
-    id: number,
-    img: string,
-    name: string,
-    quantity: number,
-    featuresOne: string,
-    featuresTwo: string,
-    featuresThree: string,
-    featuresOneOption: string,
-    featuresTwoOption: string,
-    featuresThreeOption: string,
-    minPrice: number,
-    maxPrice: number,
-    minimun: number,
-  }
-
-  const products: Array<productsOnCartInterface> = [
-    {
-      id: 1,
-      img: cartProduct,
-      name: "My Christmas Pack",
-      quantity: 0,
-      featuresOne: "CardBoard Box",
-      featuresTwo: "Unisex Short Sleeve T-Shirt",
-      featuresThree: "Bassic Bottle",
-      featuresOneOption: "(container)",
-      featuresTwoOption: "(Green, Small)",
-      featuresThreeOption: "(Blue)",
-      minPrice: 71.20,
-      maxPrice: 80,
-      minimun: 50
-    },
-    {
-      id: 1,
-      img: cartProduct,
-      name: "Basic T-Shirt",
-      quantity: 0,
-      featuresOne: "CardBoard Box",
-      featuresTwo: "Unisex Short Sleeve T-Shirt",
-      featuresThree: "Bassic Bottle",
-      featuresOneOption: "(container)",
-      featuresTwoOption: "(Green, Small)",
-      featuresThreeOption: "(Blue)",
-      minPrice: 13.50,
-      maxPrice: 80,
-      minimun: 10
-    },
-    {
-      id: 1,
-      img: cartProduct,
-      name: "Woman Bottle",
-      quantity: 0,
-      featuresOne: "CardBoard Box",
-      featuresTwo: "Unisex Short Sleeve T-Shirt",
-      featuresThree: "Bassic Bottle",
-      featuresOneOption: "(container)",
-      featuresTwoOption: "(Green, Small)",
-      featuresThreeOption: "(Blue)",
-      minPrice: 36.50,
-      maxPrice: 80,
-      minimun: 20
-    }
-  ]
-
+  const dispatch = useDispatch();
+  const products = useSelector((state:any) => state.products);
+ 
   return (
-    <div>
-        {products.map((item, index) => (
+    <Box
+    sx={{
+      marginRight:'15px'
+    }}
+    >
+      <h2>
+           Your Products
+        </h2>
+        {products.map((item:any, index:any) => (
         <ProductOnCart 
         key={index} 
+        id={item.id}
         name={item.name} 
         minPrice={item.minPrice} 
         maxPrice={item.maxPrice}
@@ -81,7 +28,7 @@ function ProductsOnCartList() {
         quantity={item.quantity}
         />
     ))}
-    </div>
+    </Box>
   )
 }
 

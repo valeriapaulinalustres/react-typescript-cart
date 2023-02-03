@@ -1,5 +1,6 @@
 import ProductOnSale from '../../components/ProductOnSale'
 import productOnSale from '../../assets/img/productOnSale.svg'
+import Box from '@mui/material/Box';
 
 function ProductsOnSaleList() {
   
@@ -82,7 +83,13 @@ function ProductsOnSaleList() {
     }
   ]
   return (
-    <div>
+    <Box
+    sx={{
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent:'space-between'
+    }}
+    >
     {products.map((item, index) => (
         <ProductOnSale 
         key={index} 
@@ -93,7 +100,7 @@ function ProductsOnSaleList() {
         minimun={item.minimun} 
         />
     ))}
-</div>
+</Box>
   )
 }
 

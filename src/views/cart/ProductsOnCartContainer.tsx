@@ -1,10 +1,15 @@
+import Box from '@mui/material/Box';
 import ProductsOnCartList from "./ProductsOnCartList"
 
 function ProductsOnCartContainer() {
   return (
-    <div>
+    <Box
+    sx={{
+      width:'80%'
+    }}
+    >
       <ProductsOnCartList />
-    </div>
+    </Box>
   )
 }
 

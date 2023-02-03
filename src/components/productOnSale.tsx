@@ -1,3 +1,5 @@
+import Box from '@mui/material/Box';
+
 type ProductsArgs = {
     img: string,
     name: string,
@@ -8,20 +10,31 @@ type ProductsArgs = {
 
 function ProductOnSale({ img, name, minPrice, maxPrice, minimun }: ProductsArgs) {
     return (
-        <div>
+        <Box
+        sx={{
+            margin:"10px"
+        }}
+        >
             <img src={img} alt={name}/>
             <h4>
                 {name}
             </h4>
-            <div>
+            <Box
+            sx={{
+                display:'flex',
+                flexDirection:'row',
+                justifyContent:'space-between',
+                alignItems:'center'
+            }}
+            >
                 <h5>
                     $ {minPrice} - $ {maxPrice}
                 </h5>
                 <h6>
                     Minimun {minimun}
                 </h6>
-            </div>
-        </div>
+            </Box>
+        </Box>
     )
 }
 

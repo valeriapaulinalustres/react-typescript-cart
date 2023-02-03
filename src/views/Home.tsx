@@ -1,6 +1,15 @@
+import Box from '@mui/material/Box';
+
 function Home() {
   return (
-    <h1>Home</h1>
+    <Box
+      sx={{
+        margin: '96px'
+      }}
+    >
+      <h1>Home</h1>
+    </Box>
+
   )
 }
 
